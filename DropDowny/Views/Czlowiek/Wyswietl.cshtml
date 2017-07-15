@@ -1,0 +1,25 @@
+﻿@model DropDowny.Models.Czlowiek
+@{
+    ViewBag.Title = "Wyswietl";
+}
+
+<h2>Wyswietl</h2>
+
+<div>Czlowieks Imie: @Model.Imie</div>
+<div>Czlowieks Nazwisko: @Model.Nazwisko</div>
+<div>Czlwoeiks Wykształcenie: @Model.Wyksztalcenie</div>
+@*Czlowieks Wyksztalcenie: @foreach (var item in Model.Wyszktalcenies)
+{
+    <div>@item</div>
+}*@
+
+<p id="wynik"></p>
+
+<script>
+    var a, b,c;
+    a = 12@*@Model.Wyksztalcenie*@;
+    b = 2@*@Model.Zatrudnienies*@;
+    c = a+b;
+    document.getElementById("wynik").innerHTML = c;    
+
+</script>

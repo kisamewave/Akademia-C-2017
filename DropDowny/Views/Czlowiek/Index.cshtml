@@ -1,0 +1,26 @@
+﻿@model DropDowny.CzlowiekFormViewModel.CzlowiekFormViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Czlowiek"))
+{
+    @Html.LabelFor(l=>l.Imie);
+    @Html.TextBoxFor(l => l.Imie, new { @class = "form-control" });
+
+    @Html.LabelFor(l => l.Nazwisko);
+    @Html.TextBoxFor(l => l.Nazwisko, new { @class = "form-control" });
+
+    @Html.LabelFor(l => l.Wyksztalcenie);
+    @Html.DropDownListFor(m => m.Wyksztalcenie, new SelectList(Model.Wyksztalcenies, "Id", "PoziomWyksztalcenia"));
+
+
+    @Html.LabelFor(l => l.Zatrudnienie);
+    @Html.DropDownListFor(m => m.Zatrudnienie, new SelectList(Model.Zatrudnienies, "Id", "AktywnoscZawodowa"));
+
+   
+
+    <input type="submit" value="Wyslij" class="btn btn-primary"/>
+}

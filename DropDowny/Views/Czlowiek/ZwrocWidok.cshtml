@@ -1,0 +1,29 @@
+﻿@model DropDowny.Models.Czlowiek 
+@{
+    ViewBag.Title = "ZwrocWidok";
+}
+
+<h2>ZwrocWidok</h2>
+<span id="Element">Pawel</span>
+
+<div id="Imie">Pawel Wojtowicz</div>
+
+<script type="text/javascript">
+    var ele = document.getElementById("Element")
+    ele.innerHTML = "Dagmara"
+</script>
+
+<script type="text/javascript">
+
+    var main = document.getElementById("Imie");
+    main.onmouseenter = function ()
+    {
+        main.style.color("red");
+    };
+
+    main.onmouseleave = function () {
+        main.style.color("green");
+    };
+
+
+</script>
